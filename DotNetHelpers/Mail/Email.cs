@@ -6,14 +6,47 @@ namespace DotNetHelpers.Mail
 {
     public class Email
     {
+        /// <summary>
+        /// Sender address
+        /// </summary>
         public string From { get; }
+        /// <summary>
+        /// <see cref="List{string}"/> of recipients 
+        /// </summary>
         public List<string> To { get; set; } = new List<string>();
+
+        /// <summary>
+        /// <see cref="List{string}"/> of recipients
+        /// </summary>
         public List<string> Bcc { get; set; } = new List<string>();
+        
+        /// <summary>
+        /// <see cref="List{string}"/> of recipients 
+        /// </summary>
         public List<string> Cc { get; set; } = new List<string>();
+        /// <summary>
+        /// Is email body written in HTML or plain text
+        /// </summary>
         public bool IsHTMLBody { get; set; } = false;
+
+        /// <summary>
+        /// SMTP server address
+        /// </summary>
         public string Host { get; }
+
+        /// <summary>
+        /// SMTP server port
+        /// </summary>
         public int Port { get; }
+
+        /// <summary>
+        /// Enable SSL when sending email
+        /// </summary>
         public bool EnableSSL { get; set; } = false;
+
+        /// <summary>
+        /// Sender credentials
+        /// </summary>
         public NetworkCredential Credentials { get; }
 
         /// <summary>

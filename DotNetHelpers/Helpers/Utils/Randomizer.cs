@@ -9,6 +9,11 @@ namespace DotNetHelpers.Helpers.Utils
 {
    public class Randomizer
     {
+        /// <summary>
+        /// Generate a random string with the specified MaxSize
+        /// </summary>
+        /// <param name="maxSize">Max size of the string to generate</param>
+        /// <returns>Random string of 'maxSize' length</returns>
         public static string RandomString(int maxSize)
         {
             char[] chars = new char[10];

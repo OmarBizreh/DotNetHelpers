@@ -21,6 +21,12 @@ namespace DotNetHelpers.Security
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
 
+        /// <summary>
+        /// Encrypt a string
+        /// </summary>
+        /// <param name="plainText">String to encrypt</param>
+        /// <param name="passPhrase">PassPhrase to use when encrypting</param>
+        /// <returns></returns>
         public static string Encrypt(string plainText, string passPhrase)
         {
             // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
@@ -58,6 +64,12 @@ namespace DotNetHelpers.Security
             }
         }
 
+        /// <summary>
+        /// Decrypt a string
+        /// </summary>
+        /// <param name="cipherText">String to decrypt</param>
+        /// <param name="passPhrase">PassPhrase to use when decrypting</param>
+        /// <returns></returns>
         public static string Decrypt(string cipherText, string passPhrase)
         {
             // Get the complete stream of bytes that represent:
@@ -96,6 +108,10 @@ namespace DotNetHelpers.Security
             }
         }
 
+        /// <summary>
+        /// Generate random <see cref="byte"/> array 
+        /// </summary>
+        /// <returns></returns>
         private static byte[] Generate256BitsOfRandomEntropy()
         {
             var randomBytes = new byte[32]; // 32 Bytes will give us 256 bits.
