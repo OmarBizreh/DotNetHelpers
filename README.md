@@ -1,6 +1,13 @@
 # DotNetHelpers
 A .Net dll includes helpful functions when developing .Net Software
 
+# Download
+##[Nuget] (https://www.nuget.org/packages/DotNetHelpers)
+To install DotNetHelpers, run the following command in the Package Manager Console 
+```
+Install-Package DotNetHelpers
+```
+
 # License
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
