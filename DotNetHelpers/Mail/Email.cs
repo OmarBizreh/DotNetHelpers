@@ -10,8 +10,9 @@ namespace DotNetHelpers.Mail
         /// Sender address
         /// </summary>
         public string From { get; }
+
         /// <summary>
-        /// <see cref="List{string}"/> of recipients 
+        /// <see cref="List{string}"/> of recipients
         /// </summary>
         public List<string> To { get; set; } = new List<string>();
 
@@ -19,11 +20,12 @@ namespace DotNetHelpers.Mail
         /// <see cref="List{string}"/> of recipients
         /// </summary>
         public List<string> Bcc { get; set; } = new List<string>();
-        
+
         /// <summary>
-        /// <see cref="List{string}"/> of recipients 
+        /// <see cref="List{string}"/> of recipients
         /// </summary>
         public List<string> Cc { get; set; } = new List<string>();
+
         /// <summary>
         /// Is email body written in HTML or plain text
         /// </summary>
@@ -63,6 +65,7 @@ namespace DotNetHelpers.Mail
             this.From = _From;
             this.Credentials = _Credentials;
         }
+
         /// <summary>
         /// Send Email without Attachments
         /// </summary>
@@ -94,6 +97,7 @@ namespace DotNetHelpers.Mail
                 mClient.Send(mMessage);
             }
         }
+
         /// <summary>
         /// Send email with Attachments
         /// </summary>
@@ -117,7 +121,6 @@ namespace DotNetHelpers.Mail
 
                 foreach (var item in AttachmentsPath)
                     mMessage.Attachments.Add(new Attachment(item));
-
 
                 mClient.EnableSsl = this.EnableSSL;
                 mClient.UseDefaultCredentials = false;

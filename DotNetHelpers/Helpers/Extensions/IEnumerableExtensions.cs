@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNetHelpers.Helpers.Extensions
 {
@@ -15,7 +12,7 @@ namespace DotNetHelpers.Helpers.Extensions
         /// <param name="values">Items to look in</param>
         /// <param name="item">Item to look for</param>
         /// <returns>Array of indexes</returns>
-        public static int[] FindAllIndexOf<T> (this IEnumerable<T> values, T item)
+        public static int[] FindAllIndexOf<T>(this IEnumerable<T> values, T item)
         {
             return values.Select((b, i) => object.Equals(b, item) ? i : -1).Where(i => i != -1).ToArray();
         }

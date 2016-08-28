@@ -1,17 +1,16 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Text;
-using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace DotNetHelpers.Service.PushNotifications
 {
     public class GooglePushNotification
     {
         public string ServerID { get; set; }
+
         /// <summary>
         /// Create a new instance of <see cref="GooglePushNotification" /> class
         /// </summary>
@@ -31,7 +30,7 @@ namespace DotNetHelpers.Service.PushNotifications
         {
             try
             {
-                HttpWebRequest Request = (HttpWebRequest)WebRequest.Create("https://android.googleapis.com/gcm/send");
+                HttpWebRequest Request = (HttpWebRequest) WebRequest.Create("https://android.googleapis.com/gcm/send");
 
                 Request.Method = "POST";
                 Request.KeepAlive = false;
@@ -42,12 +41,11 @@ namespace DotNetHelpers.Service.PushNotifications
 
                 Request.ContentType = "application/json";
                 Request.Headers.Add(HttpRequestHeader.Authorization, "key=" + this.ServerID);
-                
+
                 //-- Create Stream to Write Byte Array --//
                 Stream dataStream = Request.GetRequestStream();
                 dataStream.Write(byteArray, 0, byteArray.Length);
                 dataStream.Flush();
-
 
                 //-- Post a Message --//
                 WebResponse Response = Request.GetResponse();

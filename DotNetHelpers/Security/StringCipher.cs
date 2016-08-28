@@ -1,17 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNetHelpers.Security
 {
-
     /**
      * Code from: http://stackoverflow.com/a/10177020/3104287
      */
+
     public class StringCipher
     {
         // This constant is used to determine the keysize of the encryption algorithm in bits.
@@ -30,7 +28,7 @@ namespace DotNetHelpers.Security
         public static string Encrypt(string plainText, string passPhrase)
         {
             // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
-            // so that the same Salt and IV values can be used when decrypting.  
+            // so that the same Salt and IV values can be used when decrypting.
             var saltStringBytes = Generate256BitsOfRandomEntropy();
             var ivStringBytes = Generate256BitsOfRandomEntropy();
             var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
@@ -109,7 +107,7 @@ namespace DotNetHelpers.Security
         }
 
         /// <summary>
-        /// Generate random <see cref="byte"/> array 
+        /// Generate random <see cref="byte"/> array
         /// </summary>
         /// <returns></returns>
         private static byte[] Generate256BitsOfRandomEntropy()

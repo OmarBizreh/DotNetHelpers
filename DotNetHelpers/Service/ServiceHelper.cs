@@ -1,11 +1,14 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net;
 using System.ServiceModel.Channels;
 using System.Text;
+using Newtonsoft.Json;
 
-namespace DotNetHelpers.Authentication
+namespace DotNetHelpers
 {
+    /// <summary>
+    /// Provides functions for use with <see cref="RequestContext"/>
+    /// </summary>
     public static class ServiceHelper
     {
         /// <summary>
@@ -70,7 +73,7 @@ namespace DotNetHelpers.Authentication
         public static string ExtractHeader(RequestContext mContext, string Header)
         {
             var message = mContext.RequestMessage;
-            var request = (HttpRequestMessageProperty)message.Properties[HttpRequestMessageProperty.Name];
+            var request = (HttpRequestMessageProperty) message.Properties[HttpRequestMessageProperty.Name];
             return request.Headers[Header];
         }
     }

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace DotNetHelpers.Security
 {
@@ -23,6 +20,7 @@ namespace DotNetHelpers.Security
             var encoded = Convert.ToBase64String(Encoding.UTF8.GetBytes(UserPassword), Base64FormattingOptions.None);
             return encoded;
         }
+
         /// <summary>
         /// Decodes Base64 encoded password
         /// </summary>

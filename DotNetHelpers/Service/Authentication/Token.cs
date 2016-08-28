@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using DotNetHelpers.Helpers.Extensions;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DotNetHelpers.Helpers.Extensions;
 using DotNetHelpers.Security;
 
 namespace DotNetHelpers.Service.Authentication
@@ -25,6 +23,7 @@ namespace DotNetHelpers.Service.Authentication
         /// Token generated
         /// </summary>
         public string AuthenticationToken { get; }
+
         /// <summary>
         /// Args used to create the token
         /// </summary>
@@ -40,6 +39,7 @@ namespace DotNetHelpers.Service.Authentication
                 return AuthenticationEnums.EncodingType.UTF8;
             }
         }
+
         /// <summary>
         /// Create new instance of <see cref="Token"/> class and generates a new <see cref="AuthenticationToken"/>
         /// </summary>
