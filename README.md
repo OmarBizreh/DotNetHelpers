@@ -12,6 +12,8 @@ Coming Soon
 This branch (master) includes source code that works with Microsoft .Net Core
 If you are looking for Microsoft .Net Framework 4.0+, check "master" branch
 
+#Prerequisits:
+[.Net Core] (https://www.microsoft.com/net/core)
 
 # License
 ```
