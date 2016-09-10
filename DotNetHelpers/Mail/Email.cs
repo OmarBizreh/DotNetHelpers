@@ -86,9 +86,11 @@ namespace DotNetHelpers.Mail
                 mMessage.Subject = Subject;
 
                 foreach (var item in this.To)
-                {
                     mMessage.To.Add(item);
-                }
+                foreach (var item in this.Bcc)
+                    mMessage.Bcc.Add(item);
+                foreach (var item in this.Cc)
+                    mMessage.CC.Add(item);
 
                 mClient.EnableSsl = this.EnableSSL;
                 mClient.UseDefaultCredentials = false;
@@ -115,9 +117,11 @@ namespace DotNetHelpers.Mail
                 mMessage.Subject = Subject;
 
                 foreach (var item in this.To)
-                {
                     mMessage.To.Add(item);
-                }
+                foreach (var item in this.Bcc)
+                    mMessage.Bcc.Add(item);
+                foreach (var item in this.Cc)
+                    mMessage.CC.Add(item);
 
                 foreach (var item in AttachmentsPath)
                     mMessage.Attachments.Add(new Attachment(item));
