@@ -8,6 +8,10 @@ To install DotNetHelpers, run the following command in the Package Manager Conso
 Install-Package DotNetHelpers
 ```
 
+#Support
+This branch (master) includes source code that works with Microsoft .Net Framework 4.0
+If you are looking for Microsoft .Net Core, check "DotNetCore" branch
+
 # License
 ```
 Licensed under the Apache License, Version 2.0 (the "License");
