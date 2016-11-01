@@ -68,9 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\InvalidInputException.cs" />
     <Compile Include="Helpers\Extensions\IEnumerableExtensions.cs" />
     <Compile Include="Helpers\Extensions\StringExtensions.cs" />
     <Compile Include="Helpers\Utils\Randomizer.cs" />
+    <Compile Include="Helpers\Validators\EmailValidator.cs" />
     <Compile Include="Logger\Logger.cs" />
     <Compile Include="Mail\Email.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

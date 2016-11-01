@@ -108,6 +108,10 @@ namespace DotNetHelpers.Mail
         /// <param name="AttachmentsPath">List of string containing attachments path</param>
         public void SendEmail(string Content, string Subject, List<string> AttachmentsPath)
         {
+            // To must not be empty
+            if (this.To.Count == 0)
+                throw new System.ArgumentException("To is empty");
+
             using (SmtpClient mClient = new SmtpClient(this.Host, this.Port))
             using (MailMessage mMessage = new MailMessage())
             {
