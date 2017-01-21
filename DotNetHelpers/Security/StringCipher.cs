@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 namespace DotNetHelpers.Security
 {
+    // Thanks to CraigTP from StackOverFlow for this code.
+    // Link: http://stackoverflow.com/a/10177020/3104287
     public class StringCipher
     {
         // This constant is used to determine the keysize of the encryption algorithm in bits.
