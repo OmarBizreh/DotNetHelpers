@@ -2,13 +2,13 @@
 A .Net dll includes helpful functions when developing .Net Software
 
 # Download
-##[Nuget] (https://www.nuget.org/packages/DotNetHelpers)
+## [Nuget] (https://www.nuget.org/packages/DotNetHelpers)
 To install DotNetHelpers, run the following command in the Package Manager Console 
 ```
 Install-Package DotNetHelpers
 ```
 
-#Support
+# Support
 This branch (master) includes source code that works with Microsoft .Net Framework 4.0
 If you are looking for Microsoft .Net Core, check "DotNetCore" branch
 
